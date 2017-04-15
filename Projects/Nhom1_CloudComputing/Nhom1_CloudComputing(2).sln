@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Nhom1_CloudComputing(2)", "http://localhost:39580", "{615A7F9D-0F20-41EA-A6F9-5B2B3166E16B}"
+	ProjectSection(WebsiteProperties) = preProject
+		Frontpage = "false"
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_39580"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\WebSites\Nhom1_CloudComputing\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_39580\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_39580"
+		Release.AspNetCompiler.PhysicalPath = "..\..\WebSites\Nhom1_CloudComputing\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_39580\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\..\WebSites\Nhom1_CloudComputing\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{615A7F9D-0F20-41EA-A6F9-5B2B3166E16B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{615A7F9D-0F20-41EA-A6F9-5B2B3166E16B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
