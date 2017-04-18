@@ -4,7 +4,7 @@
     <hgroup class="title">
         <h1><%: Title %></h1>
     </hgroup>
-    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" CellSpacing="1" DataKeyNames="MaHD" DataSourceID="SqlDataSource1" GridLines="None" Width="100%">
+    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" CellSpacing="1" DataKeyNames="MaHD" DataSourceID="SqlDataSource1" GridLines="None">
         <Columns>
             <asp:BoundField DataField="MaHD" HeaderText="MaHD" InsertVisible="False" ReadOnly="True" SortExpression="MaHD" />
             <asp:BoundField DataField="MaKH" HeaderText="MaKH" SortExpression="MaKH" />
@@ -12,7 +12,7 @@
             <asp:BoundField DataField="NgayGiao" HeaderText="NgayGiao" SortExpression="NgayGiao" />
             <asp:BoundField DataField="DiaChi" HeaderText="DiaChi" SortExpression="DiaChi" />
             <asp:CheckBoxField DataField="TrangThai" HeaderText="TrangThai" SortExpression="TrangThai" />
-            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
+            <asp:CommandField ButtonType="Button" ShowDeleteButton="True" ShowEditButton="True" />
         </Columns>
         <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
         <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#E7E7FF" />
@@ -24,7 +24,7 @@
         <SortedDescendingCellStyle BackColor="#CAC9C9" />
         <SortedDescendingHeaderStyle BackColor="#33276A" />
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:INF205ConnectionString %>" DeleteCommand="DELETE FROM [HoaDon] WHERE [MaHD] = @MaHD" InsertCommand="INSERT INTO [HoaDon] ([MaKH], [NgayBan], [NgayGiao], [DiaChi], [TrangThai]) VALUES (@MaKH, @NgayBan, @NgayGiao, @DiaChi, @TrangThai)" SelectCommand="SELECT [MaHD], [MaKH], [NgayBan], [NgayGiao], [DiaChi], [TrangThai] FROM [HoaDon] ORDER BY [MaHD]" UpdateCommand="UPDATE [HoaDon] SET [MaKH] = @MaKH, [NgayBan] = @NgayBan, [NgayGiao] = @NgayGiao, [DiaChi] = @DiaChi, [TrangThai] = @TrangThai WHERE [MaHD] = @MaHD">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [HoaDon] WHERE [MaHD] = @MaHD" InsertCommand="INSERT INTO [HoaDon] ([MaKH], [NgayBan], [NgayGiao], [DiaChi], [TrangThai]) VALUES (@MaKH, @NgayBan, @NgayGiao, @DiaChi, @TrangThai)" SelectCommand="SELECT [MaHD], [MaKH], [NgayBan], [NgayGiao], [DiaChi], [TrangThai] FROM [HoaDon] ORDER BY [MaHD]" UpdateCommand="UPDATE [HoaDon] SET [MaKH] = @MaKH, [NgayBan] = @NgayBan, [NgayGiao] = @NgayGiao, [DiaChi] = @DiaChi, [TrangThai] = @TrangThai WHERE [MaHD] = @MaHD">
         <DeleteParameters>
             <asp:Parameter Name="MaHD" Type="Int32" />
         </DeleteParameters>
@@ -44,5 +44,5 @@
             <asp:Parameter Name="MaHD" Type="Int32" />
         </UpdateParameters>
     </asp:SqlDataSource>
-</asp:Content>
+    </asp:Content>
 

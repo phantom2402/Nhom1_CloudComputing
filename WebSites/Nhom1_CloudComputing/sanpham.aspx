@@ -4,14 +4,14 @@
     <hgroup class="title">
         <h1><%: Title %></h1>
     </hgroup>
-    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" CellSpacing="1" DataKeyNames="MaSP" DataSourceID="SqlDataSource1" GridLines="None" Width="100%" Height="200px">
+    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" CellSpacing="1" DataKeyNames="MaSP" DataSourceID="SqlDataSource1" GridLines="None" Width="100%">
         <Columns>
             <asp:BoundField DataField="MaSP" HeaderText="MaSP" InsertVisible="False" ReadOnly="True" SortExpression="MaSP" />
             <asp:BoundField DataField="TenSP" HeaderText="TenSP" SortExpression="TenSP" />
             <asp:BoundField DataField="MoTa" HeaderText="MoTa" SortExpression="MoTa" />
             <asp:BoundField DataField="MaDanhMuc" HeaderText="MaDanhMuc" SortExpression="MaDanhMuc" />
             <asp:BoundField DataField="Gia" HeaderText="Gia" SortExpression="Gia" />
-            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
+            <asp:CommandField ButtonType="Button" ShowDeleteButton="True" ShowEditButton="True" />
         </Columns>
         <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
         <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#E7E7FF" />
@@ -23,7 +23,7 @@
         <SortedDescendingCellStyle BackColor="#CAC9C9" />
         <SortedDescendingHeaderStyle BackColor="#33276A" />
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:INF205ConnectionString2 %>" DeleteCommand="DELETE FROM [SanPham] WHERE [MaSP] = @MaSP" InsertCommand="INSERT INTO [SanPham] ([TenSP], [MoTa], [MaDanhMuc], [Gia], [HinhAnh]) VALUES (@TenSP, @MoTa, @MaDanhMuc, @Gia, @HinhAnh)" SelectCommand="SELECT [MaSP], [TenSP], [MoTa], [MaDanhMuc], [Gia], [HinhAnh] FROM [SanPham] ORDER BY [MaSP]" UpdateCommand="UPDATE [SanPham] SET [TenSP] = @TenSP, [MoTa] = @MoTa, [MaDanhMuc] = @MaDanhMuc, [Gia] = @Gia, [HinhAnh] = @HinhAnh WHERE [MaSP] = @MaSP">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [SanPham] WHERE [MaSP] = @MaSP" InsertCommand="INSERT INTO [SanPham] ([TenSP], [MoTa], [MaDanhMuc], [Gia]) VALUES (@TenSP, @MoTa, @MaDanhMuc, @Gia)" SelectCommand="SELECT [MaSP], [TenSP], [MoTa], [MaDanhMuc], [Gia] FROM [SanPham] ORDER BY [MaSP]" UpdateCommand="UPDATE [SanPham] SET [TenSP] = @TenSP, [MoTa] = @MoTa, [MaDanhMuc] = @MaDanhMuc, [Gia] = @Gia WHERE [MaSP] = @MaSP">
         <DeleteParameters>
             <asp:Parameter Name="MaSP" Type="Int32" />
         </DeleteParameters>
@@ -32,15 +32,13 @@
             <asp:Parameter Name="MoTa" Type="String" />
             <asp:Parameter Name="MaDanhMuc" Type="Int32" />
             <asp:Parameter Name="Gia" Type="Decimal" />
-            <asp:Parameter Name="HinhAnh" Type="Object" />
         </InsertParameters>
         <UpdateParameters>
             <asp:Parameter Name="TenSP" Type="String" />
             <asp:Parameter Name="MoTa" Type="String" />
             <asp:Parameter Name="MaDanhMuc" Type="Int32" />
             <asp:Parameter Name="Gia" Type="Decimal" />
-            <asp:Parameter Name="HinhAnh" Type="Object" />
             <asp:Parameter Name="MaSP" Type="Int32" />
         </UpdateParameters>
     </asp:SqlDataSource>
-</asp:Content>
+    </asp:Content>

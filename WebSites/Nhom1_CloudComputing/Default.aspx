@@ -15,11 +15,11 @@
     <h3>Quyền Lợi khi sử dụng dịch vụ của chúng tôi:</h3>
     <ol class="round">
         <li class="one">
-            <h5>Luôn là mới nhất</h5>
+            <h5>Luôn mới nhất</h5>
            Mọi sản phẩm của chúng tôi đều là những sản phẩm mới nhất, tốt nhất từ các hãng sản xuất hàng đầu thế giới!
         </li>
         <li class="two">
-            <h5>Dịch vụ bảo hàng tốt nhất</h5>
+            <h5>Dịch vụ bảo hành tốt nhất</h5>
             Chúng tôi chăm sóc khách hàng thông qua các quy trình chuẩn đảm bảo quyền lợi cho mỗi khách hàng
         </li>
         <li class="three">

@@ -10,7 +10,7 @@
             <asp:BoundField DataField="MaSP" HeaderText="MaSP" ReadOnly="True" SortExpression="MaSP" />
             <asp:BoundField DataField="Soluong" HeaderText="Soluong" SortExpression="Soluong" />
             <asp:BoundField DataField="DonGia" HeaderText="DonGia" SortExpression="DonGia" />
-            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
+            <asp:CommandField ButtonType="Button" ShowDeleteButton="True" ShowEditButton="True" />
         </Columns>
         <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
         <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#E7E7FF" />
@@ -22,7 +22,7 @@
         <SortedDescendingCellStyle BackColor="#CAC9C9" />
         <SortedDescendingHeaderStyle BackColor="#33276A" />
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:INF205ConnectionString %>" DeleteCommand="DELETE FROM [ChiTietHoaDon] WHERE [MaHD] = @MaHD AND [MaSP] = @MaSP" InsertCommand="INSERT INTO [ChiTietHoaDon] ([MaHD], [MaSP], [Soluong], [DonGia]) VALUES (@MaHD, @MaSP, @Soluong, @DonGia)" SelectCommand="SELECT [MaHD], [MaSP], [Soluong], [DonGia] FROM [ChiTietHoaDon] ORDER BY [MaHD]" UpdateCommand="UPDATE [ChiTietHoaDon] SET [Soluong] = @Soluong, [DonGia] = @DonGia WHERE [MaHD] = @MaHD AND [MaSP] = @MaSP">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [ChiTietHoaDon] WHERE [MaHD] = @MaHD AND [MaSP] = @MaSP" InsertCommand="INSERT INTO [ChiTietHoaDon] ([MaHD], [MaSP], [Soluong], [DonGia]) VALUES (@MaHD, @MaSP, @Soluong, @DonGia)" SelectCommand="SELECT [MaHD], [MaSP], [Soluong], [DonGia] FROM [ChiTietHoaDon] ORDER BY [MaHD]" UpdateCommand="UPDATE [ChiTietHoaDon] SET [Soluong] = @Soluong, [DonGia] = @DonGia WHERE [MaHD] = @MaHD AND [MaSP] = @MaSP">
         <DeleteParameters>
             <asp:Parameter Name="MaHD" Type="Int32" />
             <asp:Parameter Name="MaSP" Type="Int32" />
@@ -40,5 +40,5 @@
             <asp:Parameter Name="MaSP" Type="Int32" />
         </UpdateParameters>
     </asp:SqlDataSource>
-</asp:Content>
+    </asp:Content>
 
